@@ -1,0 +1,37 @@
+GET http://localhost:9000/api/article
+###
+
+GET http://localhost:9000/api/article/02156fb66f12de15f1f969208e91b52c9b777768
+###
+
+POST http://localhost:9000/api/article
+Content-Type: application/json
+
+{
+    "token": "02156fb66f12de15f1f969208e91b52c9b777768",
+    "title": "Les roses ont des épines",
+    "pageLink": "mawena.org",
+    "imageLink": "mawena-img.org",
+    "contentBase": "comment te dire ou te faire comprendre que la vie n'était qu'un simple songe, un mensonge que la vérité rone, les roses ont des épines...",
+    "data": "2021-08-12T18:08:48.000Z",
+    "categorieToken": "4f839edc18788a19f54ebe43c4d7e20e09c6edc9",
+    "webSiteToken": "328ae4c2d4b20b0663074b54259c43e79f82fd44"
+}
+###
+
+PUT http://localhost:9000/api/article/02156fb66f12de15f1f969208e91b52c9b777768
+Content-Length: application/json
+
+{
+    "token": "02156fb66f12de15f1f969208e91b52c9b777768",
+    "title": "Les roses ont des épines2",
+    "pageLink": "mawena.org",
+    "imageLink": "mawena-img.org",
+    "contentBase": "comment te dire ou te faire comprendre que la vie n'était qu'un simple songe, un mensonge que la vérité rone, les roses ont des épines...",
+    "data": "2021-08-12T18:08:48.000Z",
+    "categorieToken": "4f839edc18788a19f54ebe43c4d7e20e09c6edc9",
+    "webSiteToken": "328ae4c2d4b20b0663074b54259c43e79f82fd44"
+}
+###
+
+DELETE http://localhost:9000/api/article/02156fb66f12de15f1f969208e91b52c9b777768

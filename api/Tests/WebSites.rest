@@ -1,0 +1,30 @@
+GET http://localhost:9000/api/website
+###YES
+
+GET http://localhost:9000/api/website/2q5s4d5fqsdfqsd254fq5sd4f5qsdf
+###YES
+
+POST http://localhost:9000/api/website
+Content-Type: application/json
+
+{
+    "token": "2q5s4d5fqsdfqsd254fq5sd4f5qsdf",
+    "name": "Otacku Attack",
+    "slug": "otacku_attack",
+    "indexPageLink": "http://localhost:82"
+}
+###YES
+
+PUT http://localhost:9000/api/website/2q5s4d5fqsdfqsd254fq5sd4f5qsdf
+Content-Type: application/json
+
+{
+    "token": "2q5s4d5fqsdfqsd254fq5sd4f5qsdf",
+    "name": "Otacku Attack2",
+    "slug": "otacku_attack",
+    "indexPageLink": "http://localhost:82"
+}
+###YES
+
+DELETE http://localhost:9000/api/website/2q5s4d5fqsdfqsd254fq5sd4f5qsdf
+###YES

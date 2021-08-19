@@ -1,0 +1,25 @@
+GET http://localhost:9000/api/categorie
+###
+
+GET http://localhost:9000/api/categorie/2q5sd5qsmlkdfqsdfqsd254fq5sd4f5qsdf
+###
+
+POST http://localhost:9000/api/categorie
+Content-Type: application/json
+
+{
+    "token": "2q5sd5qsmlkdfqsdfqsd254fq5sd4f5qsdf",
+    "name": "Charles"
+}
+###
+
+PUT http://localhost:9000/api/categorie/2q5sd5qsmlkdfqsdfqsd254fq5sd4f5qsdf
+Content-Length: application/json
+
+{
+    "token": "2q5sd5qsmlkdfqsdfqsd254fq5sd4f5qsdf",
+    "name": "Charles2"
+}
+###
+
+DELETE http://localhost:9000/api/categorie/2q5sd5qsmlkdfqsdfqsd254fq5sd4f5qsdf
