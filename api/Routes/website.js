@@ -1,6 +1,6 @@
 const websiteRoutes = require("express").Router();
 
-routes.get("/website", (req, res)=>{
+websiteRoutes.get("/", (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err);
         
@@ -12,7 +12,7 @@ routes.get("/website", (req, res)=>{
     })
 });
 
-routes.get("/website/:token", (req, res)=>{
+websiteRoutes.get("/:token", (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err);
 
@@ -24,7 +24,7 @@ routes.get("/website/:token", (req, res)=>{
     });
 })
 
-routes.post("/website", (req, res)=>{
+websiteRoutes.post("/", (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err);
         
@@ -38,7 +38,7 @@ routes.post("/website", (req, res)=>{
     })
 });
 
-routes.put("/website/:token", (req, res)=>{
+websiteRoutes.put("/:token", (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err);
         conn.query("UPDATE WebSites set ? WHERE `token` = ?;", [req.body, req.params.token], (err, rows)=>{
@@ -51,7 +51,7 @@ routes.put("/website/:token", (req, res)=>{
     })
 })
 
-routes.delete("/website/:token", (req, res)=>{
+websiteRoutes.delete("/:token", (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
 
@@ -64,3 +64,5 @@ routes.delete("/website/:token", (req, res)=>{
         });
     })
 });
+
+module.exports = websiteRoutes;
